@@ -24,7 +24,7 @@ const guilherme = {
   name:     "Guilherme Sampaio",
   role:     "Full-Stack Developer & Game Dev",
   location: "Cruzeiro — SP, Brasil 🇧🇷",
-  education: ["Eng. de Computação · UNIFEI", "Técnico em Informática · SENAI-SP"],
+  education: ["Eng. de Computação · UNIFEI", "Técnico em EletroMecânica · SENAI-SP"],
   focus:    ["Angular", "Firebase", "TypeScript", "Clean Architecture"],
   available: true, // disponível para freelance
 };
@@ -231,7 +231,7 @@ Jogo prototipado do zero em 72 horas para a Ludum Dare. Mecânicas implementadas
 
 <div align="center">
 
-<img height="180em" src="https://github-readme-stats.vercel.app/api?username=Guismpaio2&show_icons=true&theme=radical&include_all_commits=true&count_private=true&hide_border=true&bg_color=0d1117&title_color=DD0031&icon_color=DD0031" />
+<img height="180em" src="https://github-readme-stats.vercel.app/api?username=Guismpaio2&show_icons=true&theme=radical&hide_border=true&bg_color=0d1117&title_color=DD0031&icon_color=DD0031" />
 <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Guismpaio2&layout=compact&langs_count=8&theme=radical&hide_border=true&bg_color=0d1117&title_color=DD0031" />
 
 </div>
@@ -255,9 +255,31 @@ Jogo prototipado do zero em 72 horas para a Ludum Dare. Mecânicas implementadas
 </tr>
 <tr>
 <td>🏫 <b>SENAI — SP</b></td>
-<td>Técnico em Informática + Cursos Complementares</td>
+<td>Técnico em EletroMecânica + Cursos Complementares</td>
 </tr>
 </table>
+
+---
+
+## 💼 Resumo LinkedIn / LinkedIn Summary
+
+<details>
+<summary><b>🇧🇷 Versão em Português</b></summary>
+<br/>
+
+Estudante de Engenharia de Computação na UNIFEI com formação técnica em EletroMecânica. Atuo como desenvolvedor Full-Stack com foco em **Angular**, **Firebase** e **TypeScript**, aplicando arquiteturas limpas com padrões como Service Layer, Dependency Injection e RBAC em projetos reais. Tenho experiência prática com **Go**, **Java** e **Node.js** no back-end, e nas horas vagas desenvolvo jogos com **Unity** e **C#**. Busco oportunidades onde possa contribuir com soluções robustas e escaláveis, unindo minha base sólida em engenharia à paixão por criar experiências digitais de qualidade.
+
+</details>
+
+<details>
+<summary><b>🇺🇸 English Version</b></summary>
+<br/>
+
+Computer Engineering student at UNIFEI (Federal University of Itajubá) with a technical background in Electromechanics. I work as a Full-Stack Developer focused on **Angular**, **Firebase**, and **TypeScript**, applying clean architecture patterns such as Service Layer, Dependency Injection, and RBAC in real-world projects. I have hands-on experience with **Go**, **Java**, and **Node.js** on the back-end, and in my spare time I build games using **Unity** and **C#**. I'm looking for opportunities to contribute with robust and scalable solutions, combining a solid engineering foundation with a passion for crafting quality digital experiences.
+
+</details>
+
+<br/>
 
 ---
 
