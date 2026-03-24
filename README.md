@@ -24,7 +24,7 @@ const guilherme = {
   name:     "Guilherme Sampaio",
   role:     "Full-Stack Developer & Game Dev",
   location: "Cruzeiro — SP, Brasil 🇧🇷",
-  education: "Técnico em Informática · SENAI-SP",
+  education: ["Eng. de Computação · UNIFEI", "Técnico em Informática · SENAI-SP"],
   focus:    ["Angular", "Firebase", "TypeScript", "Clean Architecture"],
   available: true, // disponível para freelance
 };
@@ -166,61 +166,16 @@ src/app/
 </table>
 
 <details>
-<summary><b>🔍 Deep Dive técnico</b></summary>
+<summary><b>🔍 Decisões de Design</b></summary>
 <br/>
 
-**RBAC com AuthGuard**
-Cada rota declara `data: { roles: UserRole[] }`. O guard consome `user$` como Observable e verifica a role via `pipe(take(1), map(...))` — redireciona para `/home` se não autorizado, nunca bloqueia sem feedback.
-
-```ts
-// auth.guard.ts
-return this.authService.user$.pipe(
-  take(1),
-  map((user) => {
-    if (user && requiredRoles.includes(user.role)) return true;
-    return this.router.createUrlTree(['/home']); // RBAC declarativo por rota
-  })
-);
-```
-
-**Estado Reativo com BehaviorSubject**
-`AuthService` mantém `_userRole` como `BehaviorSubject<string | null>`, atualizado pelo stream `afAuth.authState` via `switchMap`. Métodos como `isAdmin()` derivam Observables desse subject — zero polling.
-
-```ts
-// auth.service.ts
-private _userRole = new BehaviorSubject<string | null>(null);
-
-isAdmin(): Observable<boolean> {
-  return this._userRole.asObservable().pipe(map(role => role === 'Administrador'));
-}
-```
-
-**Repository Pattern + DTO Mapping**
-`ProdutoService` usa métodos privados `convertFirestoreToAppProduto` e `convertAppToFirestoreProduto` para isolar o formato do Firestore do modelo de domínio — as páginas nunca lidam com `ProdutoFirestore` diretamente.
-
-```ts
-// produto.service.ts — DTO privado, domínio público
-private produtosCollection: AngularFirestoreCollection<ProdutoFirestore>;
-
-getProduto(uid: string): Observable<Produto> {      // ← modelo de domínio
-  return this.produtosCollection.doc(uid).valueChanges().pipe(
-    map(data => this.convertFirestoreToAppProduto(data)) // ← mapeamento interno
-  );
-}
-```
-
-**Join em Tempo Real**
-`EstoqueService.getEstoqueItems()` usa `combineLatest` sobre N observables de `getProduto()`, enriquecendo cada item com dados do produto — join declarativo, sem SQL.
-
-```ts
-// estoque.service.ts
-const produtoObservables = items.map(item =>
-  this.produtoService.getProduto(item.produtoUid).pipe(
-    map(produto => ({ ...item, nomeProduto: produto?.nome }))
-  )
-);
-return combineLatest(produtoObservables); // ← join reativo de N coleções
-```
+| Padrão | Aplicação |
+|---|---|
+| **RBAC por rota** | Controle de acesso declarativo — cada rota define as roles permitidas, sem lógica de permissão espalhada nos componentes |
+| **Reactive State** | Estado de autenticação como stream contínuo — componentes reagem a mudanças sem polling ou lógica imperativa |
+| **Service Layer** | Regras de negócio isoladas em services injetáveis — componentes só orquestram, nunca acessam dados diretamente |
+| **DTO Mapping** | Modelo de domínio desacoplado do formato de persistência — o banco pode mudar sem tocar nos componentes |
+| **Reactive Joins** | Enriquecimento de dados em tempo real combinando múltiplos streams — sem queries complexas ou estado manual |
 
 </details>
 
@@ -294,6 +249,10 @@ Jogo prototipado do zero em 72 horas para a Ludum Dare. Mecânicas implementadas
 ## 🎓 Formação
 
 <table>
+<tr>
+<td>🎓 <b>UNIFEI — Universidade Federal de Itajubá</b></td>
+<td>Engenharia de Computação · em andamento</td>
+</tr>
 <tr>
 <td>🏫 <b>SENAI — SP</b></td>
 <td>Técnico em Informática + Cursos Complementares</td>
