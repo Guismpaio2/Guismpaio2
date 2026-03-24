@@ -261,28 +261,6 @@ Jogo prototipado do zero em 72 horas para a Ludum Dare. Mecânicas implementadas
 
 ---
 
-## 💼 Resumo LinkedIn / LinkedIn Summary
-
-<details>
-<summary><b>🇧🇷 Versão em Português</b></summary>
-<br/>
-
-Estudante de Engenharia de Computação na UNIFEI com formação técnica em EletroMecânica. Atuo como desenvolvedor Full-Stack com foco em **Angular**, **Firebase** e **TypeScript**, aplicando arquiteturas limpas com padrões como Service Layer, Dependency Injection e RBAC em projetos reais. Tenho experiência prática com **Go**, **Java** e **Node.js** no back-end, e nas horas vagas desenvolvo jogos com **Unity** e **C#**. Busco oportunidades onde possa contribuir com soluções robustas e escaláveis, unindo minha base sólida em engenharia à paixão por criar experiências digitais de qualidade.
-
-</details>
-
-<details>
-<summary><b>🇺🇸 English Version</b></summary>
-<br/>
-
-Computer Engineering student at UNIFEI (Federal University of Itajubá) with a technical background in Electromechanics. I work as a Full-Stack Developer focused on **Angular**, **Firebase**, and **TypeScript**, applying clean architecture patterns such as Service Layer, Dependency Injection, and RBAC in real-world projects. I have hands-on experience with **Go**, **Java**, and **Node.js** on the back-end, and in my spare time I build games using **Unity** and **C#**. I'm looking for opportunities to contribute with robust and scalable solutions, combining a solid engineering foundation with a passion for crafting quality digital experiences.
-
-</details>
-
-<br/>
-
----
-
 ## 📫 Contato
 
 <div align="center">
